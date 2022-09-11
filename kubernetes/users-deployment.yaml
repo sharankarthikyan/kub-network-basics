@@ -14,16 +14,11 @@ spec:
     spec: 
       containers:
         - name: users
-          image: sharank10/kub-demo-users
+          image: sharank10/kub-demo-users:latest
           env:
             - name: AUTH_ADDRESS
-              value: localhost
-          resources:
-            limits:
-              memory: "128Mi"
-              cpu: "500m"
-        - name: auth
-          image: sharank10/kub-demo-auth
+              # value: "10.106.140.248"
+              value: "auth-service.default"
           resources:
             limits:
               memory: "128Mi"
