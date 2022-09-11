@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tasks-deploment
+spec:
+  selector:
+    matchLabels:
+      app: tasks
+  template:
+    metadata:
+      labels:
+        app: tasks
+    spec:
+      containers:
+      - name: tasks
+        image: sharank10/kub-demo-tasks:latest
+        env:
+          - name: TASKS_FOLDER
+            value: tasks
+          - name: AUTH_ADDRESS
+            value: "auth-service.default"
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"

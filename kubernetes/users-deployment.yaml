@@ -17,7 +17,7 @@ spec:
           image: sharank10/kub-demo-users:latest
           env:
             - name: AUTH_ADDRESS
-              # value: "10.106.140.248"
+              # value: "10.104.0.63"
               value: "auth-service.default"
           resources:
             limits:
