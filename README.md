@@ -6,6 +6,6 @@
 
 - `docker-compose down`
 
-## To start a user deployment and service:
+## To start all deployment and service:
 
-- `kubectl apply -f=users-deployment.yaml -f=users-service.yaml`
+- /kubernetes $ `kubectl apply -f=auth-deployment.yaml -f=auth-service.yaml -f=tasks-deployment.yaml -f=tasks-service.yaml -f=users-deployment.yaml -f=users-service.yaml -f=frontend-deployment.yaml -f=frontend-service.yaml`
